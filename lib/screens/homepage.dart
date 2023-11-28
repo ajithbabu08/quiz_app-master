@@ -18,34 +18,36 @@ class quizHome extends StatefulWidget {
 class _quizHomeState extends State<quizHome> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.deepPurple,
-      body: Padding(
-        padding: const EdgeInsets.symmetric(
-          vertical: 48.0,horizontal: 12.0
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Text("Flutter Quiz",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30,color: Colors.white),),
-            SizedBox(height: 120,),
-            Expanded(
-                child: Center(
-                  child: RawMaterialButton(highlightColor: Colors.green,
-                      onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Quiz_Screen()));
-                  },shape: StadiumBorder(),
-                  fillColor: Colors.white,
-                    child: const Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 12.0,horizontal: 24),
-                  child: Text("Start Quiz",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),),
-                )
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.deepPurple,
+        body: Padding(
+          padding: const EdgeInsets.symmetric(
+            vertical: 68.0,horizontal: 12.0
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text("Flutter Quiz",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30,color: Colors.white),),
+              SizedBox(height: 120,),
+              Expanded(
+                  child: Center(
+                    child: RawMaterialButton(highlightColor: Colors.green,
+                        onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> Quiz_Screen()));
+                    },shape: StadiumBorder(),
+                    fillColor: Colors.white,
+                      child: const Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 12.0,horizontal: 24),
+                    child: Text("Start Quiz",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),),
+                  )
+                    ),
                   ),
-                ),
 
-            ),
-          ],
+              ),
+            ],
+          ),
         ),
       ),
     );
