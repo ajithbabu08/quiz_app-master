@@ -65,12 +65,12 @@ List<Questionmodel> questions=[
       }
   ),
   Questionmodel(
-      "What is the purpose of the Navigator widget in Flutter ?",
+      "Who developed the Flutter Framework and continues to maintain it today ?",
       {
-        "To create a new widget": false,
-        "To manage the state of the application": false,
-        " To navigate between different \n           screens in the app": true,
-        "To handle user input": false,
+        "Facebook": false,
+        "Microsoft": false,
+        "Google": true,
+        "Oracle": false,
       }
   ),
   Questionmodel(
